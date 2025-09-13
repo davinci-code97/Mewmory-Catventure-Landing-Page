@@ -1,0 +1,46 @@
+{
+	"name": "svelte-template",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint ."
+	},
+	"devDependencies": {
+		"@eslint/compat": "latest",
+		"@eslint/js": "latest",
+		"@sveltejs/adapter-static": "latest",
+		"@sveltejs/kit": "latest",
+		"@sveltejs/vite-plugin-svelte": "latest",
+		"eslint": "latest",
+		"eslint-config-prettier": "latest",
+		"eslint-plugin-svelte": "latest",
+		"globals": "latest",
+		"prettier": "latest",
+		"prettier-plugin-svelte": "latest",
+		"svelte": "latest",
+		"svelte-check": "latest",
+		"typescript": "latest",
+		"typescript-eslint": "latest",
+		"vite": "latest",
+		"the-new-css-reset": "latest",
+		"postcss": "latest",
+		"postcss-nested": "latest",
+		"autoprefixer": "latest",
+		"vite-plugin-devtools-json": "latest",
+		"cssnano": "^5",
+		"cssnano-preset-advanced": "^5"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	}
+}
