@@ -50,7 +50,7 @@
 	<source src={backgroundVideo} type="video/mp4" />
 </video>
 
-<h1>
+<h1 class="slide-up-heading">
 	{display_text(
 		$language_preference,
 		"Chơi vui khắp chốn - Học hỏi khắp nơi - Tuổi thơ rạng ngời",
@@ -145,11 +145,7 @@
 </div>
 
 <!-- Footer -->
-<footer
-	style="background-image: url({footer_bg_img});
-		width: 100%;
-		height: auto;"
->
+<footer style="background-image: url({footer_bg_img});">
 	<img src={mewlab} alt="Mewlab Logo" style="display: block; margin: 0 auto; width: 150px; height: auto;" />
 	<h3>Mewlab</h3>
 	<a
@@ -188,7 +184,12 @@
 		</span>
 	</a>
 
-	<a href="https://www.tiktok.com/@chu_meo_zera?_t=ZS-8zrGVkTnEMy&_r=1" target="_blank" rel="noopener noreferrer" aria-label="Visit Mewlab's TikTok">
+	<a
+		href="https://www.tiktok.com/@chu_meo_zera?_t=ZS-8zrGVkTnEMy&_r=1"
+		target="_blank"
+		rel="noopener noreferrer"
+		aria-label="Visit Mewlab's TikTok"
+	>
 		<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256">
 			<g
 				fill="#ffffff"
@@ -301,11 +302,24 @@
 	}
 
 	footer {
-		text-align: center;
-		color: white;
+		width: 100%;
+		height: auto;
 		padding: 20px 0;
-		background-size: cover;
-		background-position: center;
-		margin-top: 20px;
+	}
+
+	.slide-up-heading {
+		animation: slideUp 2s cubic-bezier(0.4, 0, 0.2, 1) 1;
+		will-change: transform, opacity;
+	}
+
+	@keyframes slideUp {
+		from {
+			transform: translateY(100%);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
 	}
 </style>
