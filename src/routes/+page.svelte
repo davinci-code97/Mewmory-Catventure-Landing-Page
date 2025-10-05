@@ -304,7 +304,10 @@
 	footer {
 		width: 100%;
 		height: auto;
+		text-align: center;
+		color: white;
 		padding: 20px 0;
+		margin-top: 20px;
 	}
 
 	.slide-up-heading {
