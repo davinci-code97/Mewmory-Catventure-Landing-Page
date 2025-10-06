@@ -3,6 +3,7 @@
 
 	import backgroundVideo from "$lib/assets/videos/loading_screen.mp4";
 
+	import CoverImg from "$lib/assets/images/cover.png";
 	import MainMenuImg from "$lib/assets/images/1.png";
 	import MidAutumnImg from "$lib/assets/images/1.png";
 	import Img3 from "$lib/assets/images/3.png";
@@ -50,9 +51,11 @@
 	</div>
 </header>
 
-<video autoplay muted loop id="background-video">
-	<source src={backgroundVideo} type="video/mp4" />
-</video>
+<div class="cover" style="background-image: url({CoverImg}); background-size: cover; background-position: center;">
+	<video autoplay muted loop id="background-video">
+		<source src={backgroundVideo} type="video/mp4" />
+	</video>
+</div>
 
 <h1 class="slide-up-heading">
 	{display_text(
@@ -266,9 +269,15 @@
 		}
 	}
 
+	.cover {
+		position: relative;
+		width: 100%;
+		height: 75vh;
+		overflow: hidden;
+	}
+
 	#background-video {
 		width: 100%;
-		position: relative;
 		margin-top: -20%;
 	}
 
