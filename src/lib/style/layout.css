@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 	height: var(--full-page-height);
 	background-color: white;
