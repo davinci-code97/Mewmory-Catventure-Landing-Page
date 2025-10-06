@@ -3,18 +3,22 @@
 
 	import backgroundVideo from "$lib/assets/videos/loading_screen.mp4";
 
-	import MainMenuImg from "$lib/assets/images/main_menu.png";
-	import MidAutumnImg from "$lib/assets/images/MidAutumn.jpg";
-	import Img3 from "$lib/assets/images/3.jpg";
-	import Img4 from "$lib/assets/images/4.jpg";
+	import MainMenuImg from "$lib/assets/images/1.png";
+	import MidAutumnImg from "$lib/assets/images/1.png";
+	import Img3 from "$lib/assets/images/3.png";
+	import Img4 from "$lib/assets/images/4.png";
 
 	import footer_bg_img from "$lib/assets/images/bg.png";
 	import mewlab from "$lib/assets/images/Mewlab.jpg";
+
+	let scrollY = 0;
 </script>
 
 <svelte:head>
 	<title>Mewmory Catventure</title>
 </svelte:head>
+
+<svelte:window bind:scrollY={scrollY} />
 
 <header>
 	<div class="translate-wrapper">
@@ -63,7 +67,8 @@
 	<div class="column">
 		<img src={MainMenuImg} alt="Main Menu" />
 	</div>
-	<div class="column">
+	{#if scrollY > 250}
+	<div class="column slide-up-heading">
 		<h2>
 			{display_text(
 				$language_preference,
@@ -79,11 +84,13 @@
 			)}
 		</p>
 	</div>
+	{/if}
 </div>
 
 <!-- 2 -->
 <div class="two-column-layout">
-	<div class="column">
+	{#if scrollY > 800}
+	<div class="column slide-up-heading">
 		<h2>{display_text($language_preference, "Mini game dễ chơi, đầy màu sắc Việt", "Colorful and Easy Mini Games")}</h2>
 		<p>
 			{display_text(
@@ -93,6 +100,7 @@
 			)}
 		</p>
 	</div>
+	{/if}
 	<div class="column">
 		<img src={MidAutumnImg} alt="Food Collection" />
 	</div>
@@ -103,7 +111,8 @@
 	<div class="column">
 		<img src={Img3} alt="Fix Sword" />
 	</div>
-	<div class="column">
+	{#if scrollY > 1200}
+	<div class="column slide-up-heading">
 		<h2>
 			{display_text(
 				$language_preference,
@@ -119,11 +128,13 @@
 			)}
 		</p>
 	</div>
+	{/if}
 </div>
 
 <!-- 4 -->
 <div class="two-column-layout">
-	<div class="column">
+	{#if scrollY > 1900}
+	<div class="column slide-up-heading">
 		<h2>
 			{display_text(
 				$language_preference,
@@ -139,6 +150,7 @@
 			)}
 		</p>
 	</div>
+	{/if}
 	<div class="column">
 		<img src={Img4} alt="Stories Archive" />
 	</div>
@@ -311,7 +323,7 @@
 	}
 
 	.slide-up-heading {
-		animation: slideUp 2s cubic-bezier(0.4, 0, 0.2, 1) 1;
+		animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1) 1;
 		will-change: transform, opacity;
 	}
 
