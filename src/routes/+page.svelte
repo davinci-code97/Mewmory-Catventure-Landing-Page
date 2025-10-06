@@ -4,7 +4,7 @@
 	import backgroundVideo from "$lib/assets/videos/loading_screen.mp4";
 
 	import MainMenuImg from "$lib/assets/images/main_menu.png";
-	import food_collection_img from "$lib/assets/images/food_collection.png";
+	import MidAutumnImg from "$lib/assets/images/MidAutumn.jpg";
 	import Img3 from "$lib/assets/images/3.jpg";
 	import Img4 from "$lib/assets/images/4.jpg";
 
@@ -94,7 +94,7 @@
 		</p>
 	</div>
 	<div class="column">
-		<img src={food_collection_img} alt="Food Collection" />
+		<img src={MidAutumnImg} alt="Food Collection" />
 	</div>
 </div>
 
@@ -145,7 +145,7 @@
 </div>
 
 <!-- Footer -->
-<footer style="background-image: url({footer_bg_img});">
+<footer style="background-image: url({footer_bg_img}); background-size: cover; background-position: center;">
 	<img src={mewlab} alt="Mewlab Logo" style="display: block; margin: 0 auto; width: 150px; height: auto;" />
 	<h3>Mewlab</h3>
 	<a
@@ -254,7 +254,7 @@
 		}
 	}
 
-	video {
+	#background-video {
 		width: 100%;
 		position: relative;
 		margin-top: -20%;
@@ -294,13 +294,6 @@
 		color: darkslategrey;
 	}
 
-	h3 {
-		text-align: center;
-		font-size: 5rem;
-		padding: 10px 0;
-		color: darkblue;
-	}
-
 	footer {
 		width: 100%;
 		height: auto;
@@ -308,6 +301,13 @@
 		color: white;
 		padding: 20px 0;
 		margin-top: 20px;
+	}
+
+	h3 {
+		text-align: center;
+		font-size: 5rem;
+		padding: 10px 0;
+		color: darkblue;
 	}
 
 	.slide-up-heading {
