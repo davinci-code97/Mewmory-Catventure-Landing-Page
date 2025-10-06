@@ -5,7 +5,7 @@
 
 	import CoverImg from "$lib/assets/images/cover.png";
 	import MainMenuImg from "$lib/assets/images/1.png";
-	import MidAutumnImg from "$lib/assets/images/1.png";
+	import MidAutumnImg from "$lib/assets/images/2.png";
 	import Img3 from "$lib/assets/images/3.png";
 	import Img4 from "$lib/assets/images/4.png";
 
